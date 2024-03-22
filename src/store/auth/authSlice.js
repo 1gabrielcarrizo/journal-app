@@ -4,7 +4,7 @@ export const authSlice = createSlice({
     name: 'auth',
     initialState: {
         // definimos como se vera el auth en el store
-        status: 'not-authenticated', // not-authenticated, authenticated y checking
+        status: 'checking', // not-authenticated, authenticated y checking
         uid: null, // cuando este autenticado tendra un uid
         email: null,
         displayName: null,
@@ -27,7 +27,7 @@ export const authSlice = createSlice({
             state.email = null;
             state.displayName = null;
             state.photoURL = null;
-            state.errorMessage = payload.errorMessage;
+            state.errorMessage = payload?.errorMessage;
         },
         checkingCredentials: (state) => { // en caso de que haya tocado el boton de login
             state.status = 'checking'
