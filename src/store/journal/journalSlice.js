@@ -44,6 +44,11 @@ export const journalSlice = createSlice({
             });
             state.messageSaved = `${action.payload.title}, actualizada correctamente`
         },
+        setPhotosToActiveNote: (state, action) => {
+            state.active.imageUrls = [...state.active.imageUrls, ...action.payload]; // concatenamos las imagenes que ya tenemos con las nuevas en la nota activa
+            state.isSaving = false;
+
+        },
         deleteNoteById:  (state, action ) => {
             
         },
@@ -52,4 +57,4 @@ export const journalSlice = createSlice({
 
 
 // Action creators are generated for each case reducer function
-export const { addNewEmptyNote, setActiveNote, setNotes, setSaving, updateNote, deleteNoteById, savingNewNote } = journalSlice.actions;
+export const { addNewEmptyNote, setActiveNote, setNotes, setSaving, updateNote, deleteNoteById, savingNewNote, setPhotosToActiveNote } = journalSlice.actions;
