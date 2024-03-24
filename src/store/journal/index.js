@@ -1,4 +1,4 @@
 import { journalSlice } from "./journalSlice";
-import { startNewNote } from "./thunks";
+import { startLoadingNotes, startNewNote } from "./thunks";
 
-export {journalSlice, startNewNote}
+export {journalSlice, startNewNote, startLoadingNotes}
