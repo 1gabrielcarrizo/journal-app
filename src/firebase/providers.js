@@ -37,7 +37,6 @@ export const registerUserWithEmailPassword = async ({email, password, displayNam
             uid, photoURL, email, displayName
         }
     } catch (error) {
-        // console.log(error)
         return {
             ok: false,
             errorMessage: error.message
