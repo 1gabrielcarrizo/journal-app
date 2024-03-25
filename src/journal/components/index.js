@@ -1,5 +1,5 @@
 import ImageGallery from "./ImageGallery";
-import NavBar from "./Navbar";
+import NavBar from "./NavBar";
 import SideBar from "./SideBar";
 import SideBarItem from "./SideBarItem";
 
